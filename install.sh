@@ -68,10 +68,8 @@ adduser --system --home /usr/local/var/lib/couchdb -M --shell /bin/bash --commen
 # change file ownership
 chown -R couchdb:couchdb /usr/local/etc/couchdb /usr/local/var/lib/couchdb /usr/local/var/log/couchdb /usr/local/var/run/couchdb
 
-# run couchdb on startup
+# add couchdb to init.d
 ln -s /usr/local/etc/rc.d/couchdb /etc/init.d/couchdb
-chkconfig --add couchdb
-chkconfig --level 345 couchdb on
 
 # done!
 echo
